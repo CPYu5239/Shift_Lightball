@@ -440,9 +440,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.8761425, y: -0.0335418, z: -3.5884418}
+    m_Target: {x: -0.7098648, y: 1.1325049, z: -1.9828941}
     speed: 2
-    m_Value: {x: 0.8761425, y: -0.0335418, z: -3.5884418}
+    m_Value: {x: -0.7098648, y: 1.1325049, z: -1.9828941}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -471,13 +471,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.00009294489, y: -0.9979363, z: 0.064766146, w: 0.001549252}
+    m_Target: {x: 0.00018437744, y: -0.9998158, z: 0.018307783, w: 0.010550593}
     speed: 2
-    m_Value: {x: -0.00009294489, y: 0.9979363, z: -0.064766146, w: -0.001549252}
+    m_Value: {x: 0.00016854722, y: -0.99980307, z: 0.016807381, w: 0.010550445}
   m_Size:
-    m_Target: 12.6904545
+    m_Target: 7.2539225
     speed: 2
-    m_Value: 12.143975
+    m_Value: 7.5957303
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -532,9 +532,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 48fbffff
-      m_LastClickedID: -1208
-      m_ExpandedIDs: 6afbffff
+      m_SelectedIDs: 2afbffff68fbffff5cfbffff48fbffff3cfbffff
+      m_LastClickedID: -1220
+      m_ExpandedIDs: 0cfbffff18fbffff6afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -597,19 +597,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - "Assets/\u9810\u88FD\u7269"
+    - Assets/Material
   m_ViewMode: 1
   m_StartGridSize: 39
   m_LastFolders:
-  - "Assets/\u9810\u88FD\u7269"
+  - Assets/Material
   m_LastFoldersGridSize: 39
   m_LastProjectPath: C:\Users\user\Desktop\Shift_Lightball\Unity Project Shift Lightball
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7c2d0000
-    m_LastClickedID: 11644
+    m_SelectedIDs: 1a2d0000
+    m_LastClickedID: 11546
     m_ExpandedIDs: 00000000a82c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -665,7 +665,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 00000000ce4d0000ce320000aa380000cc36000048300000c63c00000a2e00000e2e00003a5b00009e2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -752,7 +752,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewResizer:
-    m_CachedPref: 321
+    m_CachedPref: -321
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
