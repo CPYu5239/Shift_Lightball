@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4845332582012859593}
   - component: {fileID: 2296592514683274663}
   - component: {fileID: 6101103659733596628}
+  - component: {fileID: 6561311937421341372}
   m_Layer: 0
   m_Name: Water ball
-  m_TagString: Untagged
+  m_TagString: "\u73A9\u5BB6"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2298013245888473203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.53, y: 1.53, z: 1.53}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -4784,3 +4785,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3158665
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6561311937421341372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298013245888473203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4829339fbd6994f8f816bd8b9856b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 9e5fcd07e4dc1464f8548afbd891526b, type: 2}
+  attackObject: {fileID: 4941881308606600256, guid: 7388437cd472c2b459514a05d19d7b70,
+    type: 3}
+  isDash: 0
+  gotoElement: 

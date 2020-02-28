@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - "\u53EF\u7AD9\u7ACB\u7269\u9AD4"
+  - "\u73A9\u5BB6"
+  - Fire
+  - Water
+  - Ice
+  - Earth
+  - "\u96FB\u6C60"
+  - "\u88DC\u8840"
+  - "\u8A18\u61B6\u62FC\u5716"
+  - PlayerBullet
+  - Enemy
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
