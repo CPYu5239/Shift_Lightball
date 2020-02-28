@@ -17410,6 +17410,7 @@ GameObject:
   - component: {fileID: 874389261}
   - component: {fileID: 874389260}
   - component: {fileID: 874389259}
+  - component: {fileID: 874389262}
   m_Layer: 0
   m_Name: "\u96FB\u91CF\u7CFB\u7D71"
   m_TagString: Untagged
@@ -17501,6 +17502,21 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &874389262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874389257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0d81a70f5c1d049bd985e709be6250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imgHp: {fileID: 1438547055}
+  imgBattery: {fileID: 1584866742}
+  imgEnergy: {fileID: 1288334905}
 --- !u!1 &876398966
 GameObject:
   m_ObjectHideFlags: 0
@@ -25578,6 +25594,7 @@ GameObject:
   - component: {fileID: 1329577033}
   - component: {fileID: 1329577032}
   - component: {fileID: 1329577031}
+  - component: {fileID: 1329577034}
   m_Layer: 0
   m_Name: "\u8840\u91CF\u7CFB\u7D71"
   m_TagString: Untagged
@@ -25669,6 +25686,21 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1329577034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329577029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0d81a70f5c1d049bd985e709be6250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imgHp: {fileID: 1438547055}
+  imgBattery: {fileID: 1584866742}
+  imgEnergy: {fileID: 1288334905}
 --- !u!1 &1330819729
 GameObject:
   m_ObjectHideFlags: 0
@@ -28270,6 +28302,7 @@ GameObject:
   - component: {fileID: 1504167623}
   - component: {fileID: 1504167622}
   - component: {fileID: 1504167625}
+  - component: {fileID: 1504167626}
   m_Layer: 0
   m_Name: "\u80FD\u91CF\u7CFB\u7D71"
   m_TagString: Untagged
@@ -28380,6 +28413,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1504167626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504167620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0d81a70f5c1d049bd985e709be6250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imgHp: {fileID: 1438547055}
+  imgBattery: {fileID: 1584866742}
+  imgEnergy: {fileID: 1288334905}
 --- !u!1 &1516434207
 GameObject:
   m_ObjectHideFlags: 0

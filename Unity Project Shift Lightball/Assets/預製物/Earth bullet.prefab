@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5092780793859292519}
   - component: {fileID: 3586022121347591452}
   - component: {fileID: 8525177676114489336}
-  - component: {fileID: 8704546528170037088}
   - component: {fileID: -6674186735398017186}
   m_Layer: 0
   m_Name: Earth bullet
@@ -4787,22 +4786,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8704546528170037088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2596091985088149890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b4829339fbd6994f8f816bd8b9856b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 9e5fcd07e4dc1464f8548afbd891526b, type: 2}
-  attackObject: {fileID: 0}
-  isDash: 0
-  gotoElement: 
 --- !u!114 &-6674186735398017186
 MonoBehaviour:
   m_ObjectHideFlags: 0

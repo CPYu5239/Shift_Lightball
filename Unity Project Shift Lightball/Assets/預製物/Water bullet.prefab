@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1751667489603848442}
   - component: {fileID: 4948922434149693844}
   - component: {fileID: 1142297433836946919}
-  - component: {fileID: 35833578968829583}
   - component: {fileID: 6879049613210350301}
   m_Layer: 0
   m_Name: Water bullet
@@ -4786,22 +4785,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3158665
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &35833578968829583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4941881308606600256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b4829339fbd6994f8f816bd8b9856b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 9e5fcd07e4dc1464f8548afbd891526b, type: 2}
-  attackObject: {fileID: 0}
-  isDash: 0
-  gotoElement: 
 --- !u!114 &6879049613210350301
 MonoBehaviour:
   m_ObjectHideFlags: 0

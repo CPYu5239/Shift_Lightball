@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     LineRenderer lineRenderer;
     Rigidbody rig;
     Vector3 aimPoint;
+    BarControler barControl;     //介面狀態條控制器
     public string gotoElement;    //要變成的玩素
 
     private void Start()
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
         lineRenderer.widthMultiplier = 0.025f;
         lineRenderer.positionCount = 2;
         lineRenderer.material.color = Color.black;
+        barControl = transform.Find("血條系統").GetComponent<BarControler>();       // 變形.尋找("子物件名稱")
     }
 
     private void FixedUpdate()
@@ -201,6 +203,13 @@ public class Player : MonoBehaviour
     public void Hit(float damage)
     {
         data.hp -= (int)damage;
+        data.hp = Mathf.Clamp(data.hp, 0, 1000);               //將血量夾在固定值之間
+        barControl.UpdateHpBar(data.maxHp, data.hp);
+       
+        if (data.hp == 0)
+        {
+            Death();
+        }
     }
 
     /// <summary>
