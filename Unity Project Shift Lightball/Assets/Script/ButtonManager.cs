@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
-
-
+    #region 宣告
     Animator ani1;
     Animator ani2;
     Animator ani3;
@@ -21,8 +18,8 @@ public class ButtonManager : MonoBehaviour
     Animator ani13;
     Animator ani14;
     Animator ani15;
-    Animator ani16;
-   public GameObject settingMenu;
+    public GameObject settingMenu;
+    #endregion
 
     private void Start()
     {
@@ -41,20 +38,13 @@ public class ButtonManager : MonoBehaviour
         ani13 = GameObject.Find("道具介紹").GetComponent<Animator>();
         ani14 = GameObject.Find("道具介紹2").GetComponent<Animator>();
         ani15 = GameObject.Find("空氣牆").GetComponent<Animator>();
-    
-
-
-
     }
-
 
     #region 移動方向教學
     public void OpenBasicMovement()
     {
         ani1.SetTrigger("移動方向教學(淡入)");
-
     }
-
 
     public void ShowBasicMovement()
     {
@@ -62,15 +52,11 @@ public class ButtonManager : MonoBehaviour
         ani2.SetTrigger("移動方向教學2(淡出)");
     }
 
-
-
     public void ShowBasicMovement2()
     {
         ani1.SetTrigger("移動方向教學(淡出)");
         ani2.SetTrigger("移動方向教學2(淡入)");
     }
-
-
 
     public void CloseBasicMovement2()
     {
@@ -78,16 +64,12 @@ public class ButtonManager : MonoBehaviour
         ani2.SetTrigger("移動方向教學2(淡出)");
 
     }
-
-
-
     #endregion
 
     #region  變身教學
     public void OpenTransform()
     {
         ani3.SetTrigger("變身教學(淡入)");
-
     }
 
     public void ShowTransform()
@@ -95,7 +77,6 @@ public class ButtonManager : MonoBehaviour
         ani3.SetTrigger("變身教學(淡入)");
         ani4.SetTrigger("變身教學2(淡出)");
     }
-
 
     public void ShowTransform2()
     {
@@ -113,8 +94,6 @@ public class ButtonManager : MonoBehaviour
     {
         ani4.SetTrigger("變身教學2(淡出)");
         ani5.SetTrigger("變身教學3(淡入)");
-
-
     }
 
     public void ShowTransform43()
@@ -133,24 +112,18 @@ public class ButtonManager : MonoBehaviour
     {
         ani6.SetTrigger("變身教學4(淡出)");
     }
-
     #endregion
 
     #region  攻擊教學
-
-
     public void OpenAttack()
     {
         ani7.SetTrigger("攻擊教學(淡入)");
-
     }
-
 
     public void ShowAttack()
     {
         ani7.SetTrigger("攻擊教學(淡入)");
         ani8.SetTrigger("攻擊教學2(淡出)");
-
     }
 
     public void ShowAttack2()
@@ -159,21 +132,16 @@ public class ButtonManager : MonoBehaviour
         ani8.SetTrigger("攻擊教學2(淡入)");
     }
 
-
-
     public void CloseAttack2()
     {
         ani8.SetTrigger("攻擊教學2(淡出)");
     }
-
     #endregion
 
     #region 切換維度教學
-
     public void Open3DMode()
     {
         ani9.SetTrigger("切換維度教學(淡入)");
-
     }
 
     public void Show3DMode()
@@ -181,7 +149,6 @@ public class ButtonManager : MonoBehaviour
         ani9.SetTrigger("切換維度教學(淡入)");
         ani10.SetTrigger("切換維度教學2(淡出)");
     }
-
 
     public void Show3DMode2()
     {
@@ -199,8 +166,6 @@ public class ButtonManager : MonoBehaviour
     {
         ani10.SetTrigger("切換維度教學2(淡出)");
         ani11.SetTrigger("切換維度教學3(淡入)");
-
-
     }
 
     public void Show3DMode43()
@@ -219,24 +184,18 @@ public class ButtonManager : MonoBehaviour
     {
         ani12.SetTrigger("切換維度教學4(淡出)");
     }
-
     #endregion
 
     #region  道具介紹
-
-
     public void OpenProp()
     {
         ani13.SetTrigger("道具介紹(淡入)");
-
     }
-
 
     public void ShowProp()
     {
         ani13.SetTrigger("道具介紹(淡入)");
         ani14.SetTrigger("道具介紹2(淡出)");
-
     }
 
     public void ShowProp2()
@@ -245,13 +204,10 @@ public class ButtonManager : MonoBehaviour
         ani14.SetTrigger("道具介紹2(淡入)");
     }
 
-
-
     public void CloseProp2()
     {
         ani14.SetTrigger("道具介紹2(淡出)");
     }
-
 
     public void OpenTheAirWall()
     {
@@ -262,8 +218,6 @@ public class ButtonManager : MonoBehaviour
     {
         ani15.SetTrigger("空氣牆(淡出)");
     }
-
-
     #endregion
 
     /// <summary>
@@ -281,8 +235,4 @@ public class ButtonManager : MonoBehaviour
     {
         settingMenu.SetActive(false);
     }
-
-
-
-
 }

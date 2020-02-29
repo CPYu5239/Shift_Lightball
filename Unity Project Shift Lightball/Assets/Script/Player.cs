@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
         lineRenderer.widthMultiplier = 0.025f;
         lineRenderer.positionCount = 2;
         lineRenderer.material.color = Color.black;
-        barControl = transform.Find("血條系統").GetComponent<BarControler>();       // 變形.尋找("子物件名稱")
+        barControl = GameObject.Find("狀態控制器").GetComponent<BarControler>();
     }
 
     private void FixedUpdate()
@@ -42,7 +42,6 @@ public class Player : MonoBehaviour
     {
         PlayerAim();
 
-        print("isDash=" + isDash);
         if (Input.GetKeyDown(KeyCode.F))
         {
             gameManager.ChangeElement(gotoElement);
@@ -117,13 +116,11 @@ public class Player : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y, -26.88f);
         rig.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
 
-
         float H = Input.GetAxis("Horizontal");  //取得水平
         //float V = Input.GetAxis("Vertical");   //取得前後
 
         if (Input.anyKey || Input.anyKeyDown)
         {
-            
             rig.AddForce(new Vector3(H * data.moveSpeed, 0, 0));
 
             RaycastHit hit;
@@ -135,14 +132,12 @@ public class Player : MonoBehaviour
                     //衝刺
                     if (Input.GetKeyDown(KeyCode.Mouse1))
                     {
-                        print("衝刺");
                         rig.AddForce(aimPoint * 250);
-                   }
+                    }
 
                    //跳躍
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
-                        print("跳躍");
                         rig.AddForce(new Vector3(0, 250, 0));
                     }
                 }   
@@ -155,10 +150,10 @@ public class Player : MonoBehaviour
     /// </summary>
     private void PlayerAim()
     {
-
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = -26.88f;
         Vector3 playerPos = new Vector3(transform.position.x, transform.position.y, -26.88f);
+
         if (Vector3.Distance(playerPos, mousePos) < 2)
         {
             lineRenderer.SetPosition(0, playerPos);

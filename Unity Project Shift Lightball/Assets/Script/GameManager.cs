@@ -1,27 +1,32 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject cam;
+    #region 宣告
     public static bool is3D = false;   //是否為3D模式
     public static string nowElement = "Default";
+    public static GameObject player;
+
+    public GameObject cam;
     public PlayerData data;
     public GameObject defaultBall;
     public GameObject waterBall;
     public GameObject fireBall;
     public GameObject iceBall;
     public GameObject earthBall;
-    public static GameObject player;
-
+    
+    BarControler barControler;
     Animator ani;
     Vector3 originalPos;  //紀錄玩家在3D模式中的Z軸位置
+    #endregion
 
+    #region 事件
     private void Start()
     {
         ani = GameObject.Find("Camera").GetComponent<Animator>();
         player = GameObject.Find("玩家");
         originalPos = player.transform.position;
+        barControler = GameObject.Find("狀態控制器").GetComponent<BarControler>();
     }
 
     private void Update()
@@ -46,6 +51,7 @@ public class GameManager : MonoBehaviour
         {
             data.battery += Time.deltaTime * 20;
         }
+        data.battery = Mathf.Clamp(data.battery, 0, data.maxBattery);
         #endregion
 
         #region 能量控制
@@ -58,9 +64,15 @@ public class GameManager : MonoBehaviour
         {
             data.energy -= Time.deltaTime * 1.5f;
         }
+        data.energy = Mathf.Clamp(data.energy, 0, data.maxEnergy);
         #endregion
-    }
 
+        barControler.UpdateBatteryBar(data.maxBattery,data.battery);
+        barControler.UpdateEnergyBar(data.maxEnergy,data.energy);
+    }
+    #endregion
+
+    #region 方法
     /// <summary>
     /// 攝影機視角的切換
     /// </summary>
@@ -124,4 +136,5 @@ public class GameManager : MonoBehaviour
         nowElement = gotoElement;
         data.energy = data.maxEnergy;
     }
+    #endregion
 }
