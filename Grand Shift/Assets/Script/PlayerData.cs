@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "玩家資料", menuName = "遊戲資料/玩家資料")]
 public class PlayerData : ScriptableObject
 {
-    [Header("移動速度"), Range(15,50)]
+    [Header("移動速度"), Range(0,50)]
     public float moveSpeed = 15;
     [Header("血量"), Range(0,500)]
     public int hp = 100;

@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     Vector3 aimPoint;
     BarControler barControl;     //介面狀態條控制器
     public string gotoElement;    //要變成的玩素
+    Vector3 maxSpeed;
 
     private void Start()
     {
@@ -22,18 +23,22 @@ public class Player : MonoBehaviour
         lineRenderer = gameObject.GetComponent<LineRenderer>();
         lineRenderer.widthMultiplier = 0.025f;
         lineRenderer.positionCount = 2;
-        lineRenderer.material.color = Color.black;
+        lineRenderer.material = new Material(Shader.Find("Unlit/Color"));
+        lineRenderer.material.color = Color.white;
         barControl = GameObject.Find("狀態控制器").GetComponent<BarControler>();
+        maxSpeed = new Vector3(data.moveSpeed, data.moveSpeed, 0);
     }
 
     private void FixedUpdate()
     {
         if (GameManager.is3D)
         {
+            lineRenderer.enabled = false;
             MoveIn3D();
         }
         else
         {
+            lineRenderer.enabled = true;
             MoveIn2D();
         }
     }
@@ -89,9 +94,6 @@ public class Player : MonoBehaviour
         gotoElement = "Default";
     }
 
-
-
-
     /// <summary>
     /// 3D模式的移動
     /// </summary>
@@ -106,6 +108,32 @@ public class Player : MonoBehaviour
         {
             rig.AddForce(new Vector3(V * data.moveSpeed, 0, -H * data.moveSpeed));
         }
+
+        #region 控制速度
+        if (rig.velocity.x >= data.moveSpeed || rig.velocity.x <= -data.moveSpeed)
+        {
+            if (rig.velocity.x > 0)
+            {
+                rig.velocity = new Vector3(data.moveSpeed, 0, rig.velocity.z);
+            }
+            else
+            {
+                rig.velocity = new Vector3(-data.moveSpeed, 0, rig.velocity.z);
+            }
+        }
+
+        if (rig.velocity.z >= data.moveSpeed || rig.velocity.z <= -data.moveSpeed)
+        {
+            if (rig.velocity.z > 0)
+            {
+                rig.velocity = new Vector3(rig.velocity.x, 0, data.moveSpeed);
+            }
+            else
+            {
+                rig.velocity = new Vector3(rig.velocity.x, 0, -data.moveSpeed);
+            }
+        }
+        #endregion
     }
 
     /// <summary>
@@ -125,7 +153,7 @@ public class Player : MonoBehaviour
 
             RaycastHit hit;
 
-            if (Physics.Raycast(transform.position, -transform.up, out hit,1))
+            if (Physics.Raycast(transform.position, -transform.up, out hit,0.65f))
             {
                 if (hit.collider.gameObject.tag == "可站立物體")
                 {
@@ -139,11 +167,26 @@ public class Player : MonoBehaviour
                    //跳躍
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
+                        print("跳躍");
                         rig.AddForce(new Vector3(0, 250, 0));
                     }
                 }   
             }
         }
+
+        #region 控制速度
+        if (rig.velocity.x >= data.moveSpeed || rig.velocity.x <= -data.moveSpeed)
+        {
+            if (rig.velocity.x > 0)
+            {
+                rig.velocity = new Vector3(data.moveSpeed, rig.velocity.y, 0);
+            }
+            else
+            {
+                rig.velocity = new Vector3(-data.moveSpeed, rig.velocity.y, 0);
+            }
+        }
+        #endregion
     }
 
     /// <summary>
@@ -179,7 +222,7 @@ public class Player : MonoBehaviour
 
         //transform.forward,right,up 可以抓取物件的前方,右方跟上方(反向加-號)
         //繪製射線 (中心點,方向)
-        Gizmos.DrawRay(transform.position, -transform.up);
+        Gizmos.DrawRay(transform.position + new Vector3(0,0.35f), -transform.up);
     }
 
     /// <summary>

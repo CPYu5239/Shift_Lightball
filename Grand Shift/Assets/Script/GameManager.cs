@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     BarControler barControler;
     Animator ani;
     Vector3 originalPos;  //紀錄玩家在3D模式中的Z軸位置
+    GameObject energyBar;
     #endregion
 
     #region 事件
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
         player = GameObject.Find("玩家");
         originalPos = player.transform.position;
         barControler = GameObject.Find("狀態控制器").GetComponent<BarControler>();
+        energyBar = GameObject.Find("能量系統");
         data.hp = data.maxHp;
     }
 
@@ -68,8 +70,18 @@ public class GameManager : MonoBehaviour
         data.energy = Mathf.Clamp(data.energy, 0, data.maxEnergy);
         #endregion
 
+        if (nowElement != "Default")
+        {
+            energyBar.SetActive(true);
+        }
+        else
+        {
+            energyBar.SetActive(false);
+        }
+
         barControler.UpdateBatteryBar(data.maxBattery,data.battery);
         barControler.UpdateEnergyBar(data.maxEnergy,data.energy);
+        barControler.UpdateHpBar(data.maxHp, data.hp);
     }
     #endregion
 
@@ -131,6 +143,7 @@ public class GameManager : MonoBehaviour
                 player = newBall;
                 break;
             default:
+                gotoElement = "Default";
                 break;
         }
 

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cf266289ab3b7469721d843710124b, type: 3}
   m_Name: "\u73A9\u5BB6\u8CC7\u6599"
   m_EditorClassIdentifier: 
-  moveSpeed: 15
+  moveSpeed: 10
   hp: 100
   maxHp: 100
   attack: 30
   shootAttack: 30
-  battery: 50
+  battery: 32.38507
   maxBattery: 50
-  energy: 47.71156
+  energy: 100
   maxEnergy: 100

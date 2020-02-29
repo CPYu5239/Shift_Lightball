@@ -14,7 +14,6 @@ public class ItemRotate : MonoBehaviour
 
     private void Update()
     {
-        print(originalPos.rotation);
         if (GameManager.is3D)
         {
             transform.rotation = cam.rotation;

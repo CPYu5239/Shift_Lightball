@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89083a44a7f6ec64ab46d00896340d7a, type: 3}
   m_Name: "\u6575\u4EBA\u8CC7\u6599"
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  hp: 100
+  moveSpeed: 1
+  hp: -290
   maxHp: 100
   attack: 15
   attackCD: 2.5
-  attackRange: 3
+  attackRange: 1
   attackDelay: 0.5
   detectRange: 8

@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
         agent = gameObject.GetComponent<NavMeshAgent>();
         timer = data.attackCD;
+        data.hp = data.maxHp;
     }
 
     private void Update()

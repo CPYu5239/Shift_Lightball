@@ -26,6 +26,7 @@ public class TriggerZone : MonoBehaviour
                     {
                         buttonManager.OpenBasicMovement();
                         istriggerMovement = true;
+                        gameObject.SetActive(false);
                     }
                     break;
                 case "變身教學感應區":
@@ -33,6 +34,7 @@ public class TriggerZone : MonoBehaviour
                     {
                         buttonManager.OpenTransform();
                         istriggerTransform = true;
+                        gameObject.SetActive(false);
                     }
                     break;
                 case "攻擊教學感應區":
@@ -40,6 +42,7 @@ public class TriggerZone : MonoBehaviour
                     {
                         buttonManager.OpenAttack();
                         istriggerAttack = true;
+                        gameObject.SetActive(false);
                     }
                     break;
                 case "切換維度教學感應區":
@@ -47,6 +50,7 @@ public class TriggerZone : MonoBehaviour
                     {
                         buttonManager.Open3DMode();
                         istrigger3DMode = true;
+                        gameObject.SetActive(false);
                     }
                     break;
                 case "道具介紹感應區":
@@ -54,6 +58,7 @@ public class TriggerZone : MonoBehaviour
                     {
                         buttonManager.OpenProp();
                         istriggerProp = true;
+                        gameObject.SetActive(false);
                     }
                     break;
                 case "空氣牆感應區":
@@ -61,6 +66,7 @@ public class TriggerZone : MonoBehaviour
                     {
                         buttonManager.OpenTheAirWall();
                         istriggerAirWall = true;
+                        gameObject.SetActive(false);
                     }
                     break;
                 default:
